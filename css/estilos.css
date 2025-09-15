@@ -9,6 +9,7 @@
 html{
     scroll-behavior: smooth;
     cursor: url(../assets/img/cursor.png), auto;
+    scroll-padding-top: 10vh;
 }
 body{
     cursor: url(../assets/img/cursor.png), auto;
@@ -477,8 +478,7 @@ input.derivado {
 
   .botones ul li div {
     width: 100%;
-    max-width: 200px;
-    height: 180px;
+    height: 150px;
     background-color: #FFB371;
     border-radius: 5%;
     display: flex;
@@ -490,7 +490,11 @@ input.derivado {
   }
 
   .botones ul li img {
-    width: 10vh;
+    width: 8vh;
+  }
+
+  .botones ul li div h4{
+    font-size: .8rem;
   }
 
 }
