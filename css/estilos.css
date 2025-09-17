@@ -24,7 +24,7 @@ a{
     cursor: pointer;
 }
 .links{
-  display: flex;
+  display: flex; flex-direction: row;
   align-items: center;
   gap: 2vh;
   color: #474747;
@@ -525,10 +525,10 @@ input.derivado {
 }
 
 /*SWIPER EN ACOMPAÑAMIENTOS*/
-.swiperAcompa{
+.swiperAcompa, .swiperColab{
   height: auto;       
   width: auto;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
 }
 .swiperAcompa .swiper-slide {
   height: auto !important;         
@@ -666,4 +666,126 @@ input.derivado {
     width: 60%;
     margin: 0 auto;
   }
+}
+
+/*---------------------------------------------COLABORACIONES---------------------------------------------------------------------*/
+/*Inicio seccion colaboraciones*/
+.iniciocolab{
+  display: flex;
+  align-items: center;
+  .textoColab{
+    width: 50%;
+  }
+}
+.contenedorImgColab{
+    background-color: #D7E7FF !important;
+    width: fit-content; height: fit-content;
+    padding: 8vh 8vh 8vh 15vh;
+}
+@media (max-width: 750px) {
+.iniciocolab{
+  flex-wrap: wrap-reverse;
+  align-items: center; justify-content: center;
+  margin-top: 8vh;
+  .textoColab{
+    width: 100%;
+    display: flex; flex-direction: column; gap: 3vh;
+    h1{
+      text-align: center;
+    }
+  }
+}
+.contenedorImgColab{
+    padding: 5vh;
+    margin-top: 5vh;
+}
+}
+
+/*SECCION DE OBJETIVOS DE CLABORACIONES COMPARTIDA CON SECCION DE DIRIGIDO A DE CAPACITACIONES*/
+.objetivosColab-dirigidasCapa{
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 8vh;
+  }
+}
+@media (max-width: 750px) {
+.objetivosColab-dirigidasCapa{
+  .flex{
+    flex-wrap: wrap;
+  }
+}
+}
+
+/*SWIPER EN COLABORACIONES*/
+.swiperColab{
+  .swiper-button-next {
+  background: url('../assets/img/colaboraciones/flechaSiguiente.svg') no-repeat center;
+  background-size: contain;
+}
+.swiper-button-prev {
+  background: url('../assets/img/colaboraciones/flechaAtras.svg') no-repeat center;
+  background-size: contain;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+}
+}
+.swiperColab .swiper-pagination-bullet {
+  width: 40px;               /* Rectangular */
+  height: 6px;
+  border-radius: 3px;        /* Bordes redondeados suaves, sacáselo si querés recto */
+  background: #FFB371;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.swiperColab .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #FFB371;
+}
+.swiperColab .swiper-slide {
+  height: auto !important;         
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorSwiperColab{
+  margin-left: 10vh; margin-right: 10vh;
+  display: flex;
+  gap: 8vh;
+  align-items: center; justify-content: center;
+  img{
+    max-width: 40%;
+  }
+}
+@media (max-width: 900px) {
+.contenedorSwiperColab{
+  margin-left: 8vh; margin-right: 8vh;
+  display: flex; flex-wrap: wrap-reverse;
+  gap: 3vh;
+  align-items: center; justify-content: center;
+  img{
+    min-width: 100%;
+  }
+}
+}
+
+/*SECCION FINAL DE CAPACITACION Y COLABORACIONES*/
+.finalColabCapa{
+  display: flex;
+  justify-content: space-between;
+  gap: 10vh; align-items: center;
+  .cita{
+    width: 80%;
+  }
+  .botonContacto{
+    height: fit-content;
+  }
+}
+@media (max-width: 700px) {
+.finalColabCapa{
+  flex-wrap: wrap; justify-content: center;
+}
 }
