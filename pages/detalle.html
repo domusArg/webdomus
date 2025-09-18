@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Metodlogías en Domus: Espacio para ser">
+    <meta name="keywords" content="METODOLOGÍAS, TERAPIA GRUPAL, TERAPIA INDIVIDUAL, CLUBES, CLUB LEGO, PEERS, PSICOLOGÍA, COLABORACIONES, DOMUS, TERAPIA BASADA EN LEGO, MINDFULNESS">
+    <title>Colaboraciones | Jazmín Ramírez Landazábal</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+  <link rel="stylesheet" href="../css/hover-min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="sticky-top">
+          <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid d-flex justify-content-between">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/img/logoDomus.svg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link deseleccionado" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="./clubes.html">Acompañamiento</a></li>
+        <li class="nav-item"><a class="nav-link activo" href="./colaboraciones.html">Colaboraciones</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="#">Capacitaciones</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="./noticias.html">Novedades</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+   </header>
+
+    <main>      
+      <div class="contenedorVerNoticia" id="contenido">
+      <h2 id="">Cargando noticia...</h2>
+      </div>
+    </main>
+
+
+     <!-- Footer -->
+    <footer class="separadorTop">
+      <p>Lic. Jazmín Ramírez Landazábal - Domus, espacio para ser 2025</p>
+    </footer>
+    <!-- Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+     <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".swiperColab", {
+       slidesPerView: 1,
+      spaceBetween: 30,
+      rewind: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
+
+<script>
+    const noticias = {
+    n1: {
+      titulo: "Noticia 1: Nuevo lanzamiento",
+      texto: "Hoy se lanzó un nuevo producto innovador que cambiará la industria...",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ" // URL de incrustación de YouTube
+    },
+    n2: {
+      titulo: "Noticia 2: Evento especial",
+      texto: "Este fin de semana se celebrará un evento con invitados internacionales...",
+      imagen: "imagenes/noticia2.jpg",
+      archivo: "archivos/invitacion.pdf"
+    },
+    n3: {
+      titulo: "Noticia 3: Actualización importante",
+      texto: "Se anunció una actualización en los sistemas para mejorar el rendimiento...",
+      imagen: "imagenes/noticia3.jpg"
+    }
+  };
+
+  // Leer parámetro de la URL
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const contenedor = document.getElementById("contenido");
+
+  if (id && noticias[id]) {
+    const noticia = noticias[id];
+    contenedor.innerHTML = `
+      <h1>${noticia.titulo}</h1>
+      ${noticia.imagen ? `<img src="${noticia.imagen}" alt="Imagen de la noticia">` : ""}
+      ${noticia.video ? `<div style="margin:20px 0;">
+        <iframe width="100%" height="400" src="${noticia.video}" frameborder="0" allowfullscreen></iframe>
+      </div>` : ""}
+      <p>${noticia.texto}</p>
+      ${noticia.archivo ? `<a class="btn-descargar" href="${noticia.archivo}" download>📥 Descargar archivo</a>` : ""}
+      <br>
+      <a href="noticias.html">← Volver al listado</a>
+    `;
+  } else {
+    contenedor.innerHTML = `
+      <h2>No se encontró la noticia</h2>
+      <a href="noticias.html">← Volver al listado</a>
+    `;
+  }
+  </script>
+  </body>
+</html>
