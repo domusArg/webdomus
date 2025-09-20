@@ -46,12 +46,19 @@
    </header>
 
     <main>      
-      <div class="contenedorVerNoticia" id="contenido">
-      <h2 id="">Cargando noticia...</h2>
+      <div class="contenedorVerNoticia separadorTop separadorLados" id="contenido">
+      <h1 id="">Cargando noticia...</h1>
+      <p></p>
+      <iframe class="img-fluid"
+    src="https://www.youtube.com/embed/TU_ID_DEL_VIDEO" 
+    title="YouTube video" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
       </div>
     </main>
-
-
+    
      <!-- Footer -->
     <footer class="separadorTop">
       <p>Lic. Jazmín Ramírez Landazábal - Domus, espacio para ser 2025</p>
@@ -100,21 +107,96 @@
 <script>
     const noticias = {
     n1: {
-      titulo: "Noticia 1: Nuevo lanzamiento",
-      texto: "Hoy se lanzó un nuevo producto innovador que cambiará la industria...",
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ" // URL de incrustación de YouTube
-    },
+    titulo: "Panel creatividad e inclusión en el Congreso de la Nación Argentina",
+    texto: `
+      Hoy tuve la oportunidad de compartir sobre creatividad e inclusión junto a una mesa increíble que se llevó adelante en el Congreso de la Nación Argentina, en el marco de la presentación del proyecto 'Sin ofender'.<br><br>
+      Fue un honor escuchar e intercambiar con Luciana Garabello (artista y autora de 'Sin ofender') Paola Jelonche y Graciela Suchowiercha (COPIDIS), junto a Adriana Tassotti y el equipo de Loros Parlantes.<br><br>
+      Gracias por la invitación y por la confianza infinita a todo el equipo del Centro Cultural San Martín: Máximo Jacoby, Alejandro Cejas y equipo.
+    `,
+    video: "https://www.youtube.com/embed/hXR4fvrNMyY",
+    conclusion: `
+      Es fundamental involucrarnos y seguir trabajando en proyectos con significado y con impacto social. Y sobre todo, es esencial conectar e integrar salud, educación, arte y cultura para atender y acompañar a la comunidad neurodivergente. 
+      <br><br>
+      <strong>Palabras clave:</strong> Club Lego, Terapia Basada en Lego, Club de artistas, taller de autoconocimiento, Mindfulness, Paisajes emocionales
+    `,
+    conclusion2: ``, 
+  },
     n2: {
-      titulo: "Noticia 2: Evento especial",
-      texto: "Este fin de semana se celebrará un evento con invitados internacionales...",
-      imagen: "imagenes/noticia2.jpg",
-      archivo: "archivos/invitacion.pdf"
+      titulo: "Capacitación en TBL - Posadas, Misiones",
+      texto: "",
+      imagen: "../assets/img/novedades/capacitacionTBL.png",
+      imagen2: "../assets/img/novedades/capacitacionTBL2.png",
+      video: "",
+      conclusion: ``, conclusion2: ``, imagen3:"",
     },
     n3: {
-      titulo: "Noticia 3: Actualización importante",
-      texto: "Se anunció una actualización en los sistemas para mejorar el rendimiento...",
-      imagen: "imagenes/noticia3.jpg"
-    }
+    titulo: "“Construyendo conexiones”, Club LEGO® en el Centro Cultural San Martín",
+    texto: `
+    <strong>Introducción</strong><br>
+     Argentina es un país con una tradición de apertura y respeto por la diversidad cultural y ha tenido a lo largo de su historia hitos importantes en términos de derechos. Resulta fundamental seguir trabajando para ampliar el acceso, las oportunidades y la participación de las personas neurodivergentes en términos de salud, educación y empleo. Asimismo, es muy necesario abrir y expandir los apoyos a contextos no médicos, como el arte y la cultura.
+<br><br>
+Estos espacios no solo favorecen su desarrollo integral, sino que también permiten que sus aportes enriquezcan a la comunidad en su conjunto. Al abrir estos horizontes, rompemos con la visión tradicional que reduce a las personas neurodivergentes a sujetos de atención médica, y las reconocemos como actores activos, valiosos y creativos en la construcción de una comunidad más justa e inclusiva. La diversidad debe ser vista como una fuente de enriquecimiento que fortalece el sistema social, ya que su exclusión afecta el equilibrio y las conexiones que mantienen viva a la sociedad
+<br><br>
+En las últimas décadas se ha observado un incremento en la prevalencia de niños con condiciones del neurodesarrollo, desafíos en la comunicación y socialización. Del mismo modo, transitamos una época en la que han disminuido las oportunidades para jugar y para comunicarnos sin dispositivos de por medio. En este contexto, se ha evidenciado la necesidad de enfoques terapéuticos centrados en la construcción de la identidad social, la motivación y la colaboración entre pares, más allá de los enfoques tradicionales mediados por adultos. En esa línea se inscribe el surgimiento de la Terapia Basada en LEGO® (TBL), creada por el Dr. Daniel LeGoff hacia finales de los años '90.
+<br><br>
+El Dr. LeGoff desarrolló esta modalidad de terapia con el objetivo de mejorar la socialización de niños dentro del espectro autista. Se utilizan bloques LEGO® como herramienta principal, para fomentar la expresión, la comunicación y la resolución de problemas mediante la colaboración entre pares. Este método no solo ofrece una alternativa a las intervenciones tradicionales, sino que aborda de manera efectiva aspectos clave como la motivación social y el sentido de pertenencia. El Club LEGO® se plantea como un espacio en el que, a través del juego y la construcción, las personas neurodivergentes aprenden a colaborar y a generar vínculos significativos mientras se divierten.
+<br><br>
+La TBL se ha implementado e investigado en muchos países alrededor del mundo y se implementa de manera regular desde hace diez años en la región. En Argentina, se llevan adelante clubes de LEGO® especialmente en el ámbito clínico de forma privada.
+    `,
+    video: "",
+    imagen: "../assets/img/novedades/sanMartin.webp",
+    conclusion: `
+    <strong>El Club LEGO® en el San Martín</strong><br>
+      El sábado 18 de mayo de 2024 se llevó a cabo la primera experiencia abierta y gratuita de Club LEGO® en el Centro Cultural San Martín en la Ciudad de Buenos Aires. Participaron un total de 45 chicos/as, de entre 5 a 20 años, los cuales fueron acompañados por sus padres, madres y/o cuidadores.
+<br><br>
+La organización de esta jornada estuvo a cargo de la Lic. Jazmín Ramírez Landazábal, quien fue invitada a desarrollar esta actividad por las autoridades del Centro Cultural San Martín (Mariana Ron, Máximo Jacoby), y la artista Luciana Garabello junto a su hija Luisa Oxenford, en el marco de la presentación de la muestra de arte ̈Sin ofender ̈. Este ciclo de actividades artísticas y culturales, partió de la publicación del libro homónimo, escrito por madre e hija, el cual propone un mensaje de respeto y concientización sobre el espectro autista.
+<br><br>
+El Club LEGO®, presentado como ̈Construyendo conexiones", consistió en la organización de una jornada pública, abierta y gratuita en la que se invitaba a la comunidad a llevar a sus hijos/as a participar de un encuentro lúdico para construir con bloques de LEGO®. La participación requirió de una inscripción previa, realizada mediante un formulario online. En este formulario, además de los datos básicos como nombre y edad, se incluyeron preguntas sobre fortalezas, desafíos e intereses de los participantes. Esto permitió recopilar información relevante para utilizar durante la actividad, así como una mejor preparación del equipo facilitador, posibilitando identificar necesidades específicas de algunos de los participantes en cuanto al nivel de apoyo. Se solicitó además, el consentimiento para el uso de fotos, videos y otros materiales relacionados con la actividad para posterior difusión.
+<br><br>
+Asimismo, se envió a las familias antes del evento un recurso descargable con una historia social, a modo de anticipador para los participantes. El equipo facilitador contó con la participación de profesionales en psicología formados en TBL (Marina Cobian, Alejandro Lago, Alicia Paniagua y Florencia Navarro), quienes junto al personal del Centro Cultural (Alejandro Cejas) colaboraron con la recepción de los participantes y estuvieron disponibles para guiar y dar soporte durante toda la jornada. El taller se diseñó de esta manera para asegurar que el Club LEGO® sucediera con total fluidez y se pudieran ofrecer los apoyos respetando las necesidades individuales de cada participante.
+<br><br>
+La consigna de la jornada se basó en que los participantes construyeran un bosque y figuras de tigres, utilizando la temática del libro "Sin ofender". Se dispusieron mesas para la construcción colaborativa y cajas con piezas libres de diferentes colores. Se incluyó una "zona de calma", equipada con almohadones, papel, marcadores y una bolsa de objetos sensoriales, como una alternativa para aquellos participantes que necesitaran de un espacio con menos estímulos para descansar.
+<br><br>
+Para brindar contexto, se imprimieron hojas con las "Reglas de la buena onda" y se comunicó el plan de construcción con un lenguaje claro, así todos los participantes tenían información sobre la jornada y sobre el acuerdo para construir y hacer con otros en un marco de respeto, diversión y convivencia. Estas reglas incluían el uso de palabras amables, el respeto por el cuerpo y las ideas de los demás, y la disposición a ayudar o pedir ayuda cuando fuera necesario.
+    `,
+    imagen3: "../assets/img/novedades/sanMartin2.webp",
+    conclusion2: ` 
+    <strong>Reflexiones</strong>
+    <br>
+    En "Construyendo conexiones", se generó un encuentro inesperado y enriquecedor entre personas que no se conocían. El espacio no solo sirvió como escenario físico, sino como un verdadero punto de conexión, donde los participantes, desde sus diferencias, pudieron compartir ideas y trabajar juntos en la creación de algo valioso. Lo más sorprendente fue cómo, sin una relación previa, surgió una comunidad vibrante y dinámica. Este proyecto evidenció el inmenso potencial de los espacios colaborativos en contextos culturales para transformar encuentros casuales en experiencias colectivas, donde la creatividad y el vínculo fortalecen el sentido de pertenencia. Fue muy emocionante no solo ver a los chicos, sino también a tantas familias conectando, sonriendo y sintiéndose parte de una comunidad valiosa.
+<br><br>
+Desde el lente de Gaston Bachelard en "La poética del espacio", estos lugares dejan de ser simples escenarios físicos y se convierten en espacios habitados simbólicamente. Los espacios en los que nos movemos y participamos nos conectan con lo íntimo y lo colectivo, permitiéndonos soñar y compartir. En nuestro proyecto, el San Martín trascendió lo material para volverse un lugar donde las personas se encontraron no solo con los otros, sino consigo mismas. Al colaborar, llenaron ese espacio de significado, y como sugiere Bachelard, crearon un lugar donde lo individual y lo colectivo se entrelazan, generando una experiencia transformadora.
+<br><br>
+Pertenecer es fundamental para el bienestar humano. La necesidad de ser parte de un todo más grande es intrínseca a nuestra naturaleza. La exclusión, por el contrario, rompe esa dinámica vital, generando aislamiento y sufrimiento. El "entre", como espacio de encuentro y colaboración, nos invita a valorar y fomentar una convivencia inclusiva, donde todos puedan contribuir y sentirse parte del sistema. Solo a través de la interacción y el reconocimiento mutuo, las sociedades logran florecer y desarrollar su verdadero potencial.
+<br><br>
+Michael Tomasello plantea que lo que nos hace verdaderamente humanos es nuestra capacidad única para colaborar y compartir objetivos comunes. A diferencia de otras especies, los seres humanos han desarrollado una habilidad sofisticada para trabajar en conjunto hacia metas compartidas, lo que da lugar a formas complejas de cultura, lenguaje y pensamiento. La socialización juega un rol crucial en este proceso, ya que es a través de la interacción con los demás que aprendemos las normas, valores y habilidades que nos permiten convivir y colaborar. La colaboración, por lo tanto, no es solo una estrategia de supervivencia, sino el fundamento de nuestra identidad como seres humanos. Es en este "entre" —en la relación con los otros— donde se construye nuestra humanidad.
+<br><br>
+Este proyecto permitió experimentar la sinergia creativa y la construcción de conexiones valiosas para la comunidad. Es importante continuar fomentando y expandiendo iniciativas que nos inspiran y conmueven. Proyectos que desde una perspectiva social, aumentan la participación y nos permiten seguir siendo y haciendo... a partir de las fortalezas y la humanidad compartida.
+    `,
+     tituloLista: "Bibliografía", 
+    puntos: [
+      "Bachelard, G. (2000). La Poética del espacio. Fondo de Cultura Económica.",
+      "Baron-Cohen, S., De La Cuesta, G. G., LeGoff, D. B., & Krauss, G. W. (2014).",
+      "LEGO®-Based Therapy: How to build social competence through LEGO®-Based Clubs for children with autism and related conditions. Jessica Kingsley Publishers.",
+      "LeGoff, D. B. (2024). Terapia Basada en Lego: teoría y práctica actual. Editorial Akadia.",
+      "LeGoff, D. B. (2017). How LEGO®-based Therapy for Autism Works: Landing on My Planet.",
+      "Jessica Kingsley Publishers.",
+      "LeGoff, D.B. (2004). Use of LEGO© as a Therapeutic Medium for Improving Social",
+      "Competence. Autism Dev Disord 34, 557–571.",
+      "Narzisi, A., Sesso, G., Berloffa, S., Fantozzi, P., Muccio, R., Valente, E., Viglione, V.,",
+      "Villafranca, A., Milone, A., & Masi, G. (2021). Could You Give Me the Blue Brick?",
+      "LEGO®-Based Therapy as a Social Development Program for Children with Autism Spectrum Disorder: A Systematic Review. Brain sciences, 11(6), 702.",
+      "Tomasello, Michael (2021). Lo que nos hace humanos, una teoría de la ontogenia. Dr Buk.",
+    ]
+    },n4: {
+      titulo: "Colaboración en el proyecto 'Sin ofender'",
+      texto: "Presentación del libro 'Sin ofender' junto a Luciana Garabello y Luisa Oxenford",
+      imagen: "../assets/img/novedades/sinofender.webp",
+      imagen2: "../assets/img/novedades/sinofender2.webp",
+      imagen3: "../assets/img/novedades/sinofender3.webp",
+      video: "",
+      conclusion: ``, conclusion2: ``, imagen3:"",
+    },
   };
 
   // Leer parámetro de la URL
@@ -124,17 +206,25 @@
 
   if (id && noticias[id]) {
     const noticia = noticias[id];
-    contenedor.innerHTML = `
-      <h1>${noticia.titulo}</h1>
-      ${noticia.imagen ? `<img src="${noticia.imagen}" alt="Imagen de la noticia">` : ""}
-      ${noticia.video ? `<div style="margin:20px 0;">
-        <iframe width="100%" height="400" src="${noticia.video}" frameborder="0" allowfullscreen></iframe>
-      </div>` : ""}
-      <p>${noticia.texto}</p>
-      ${noticia.archivo ? `<a class="btn-descargar" href="${noticia.archivo}" download>📥 Descargar archivo</a>` : ""}
-      <br>
-      <a href="noticias.html">← Volver al listado</a>
-    `;
+   contenedor.innerHTML = `
+  <h1>${noticia.titulo}</h1>
+  <p>${noticia.texto}</p>
+  <div class="contenedorImgDetalle">
+  ${noticia.imagen ? `<img class="img-fluid" src="${noticia.imagen}" alt="Imagen de la noticia" class="img-fluid">` : ""}
+  ${noticia.imagen2 ? `<img class="img-fluid" src="${noticia.imagen2}" alt="Imagen de la noticia" class="img-fluid">` : ""}
+  </div>
+  ${noticia.video ? `<div>
+    <iframe class="img-fluid" src="${noticia.video}" frameborder="0" allowfullscreen></iframe>
+  </div>` : ""}
+  ${noticia.archivo ? `<a class="btn-descargar" href="${noticia.archivo}" download>📥 Descargar archivo</a>` : ""}
+  <p>${noticia.conclusion}</p>
+  <div class="contenedorImgDetalle">
+  ${noticia.imagen3 ? `<img class="img-fluid" src="${noticia.imagen3}" alt="Imagen de la noticia" class="img-fluid">` : ""}
+  </div>
+  <p>${noticia.conclusion2}</p>
+  ${noticia.puntos ? `<h3>${noticia.tituloLista}</h3><ul>${noticia.puntos.map(p => `<li>${p}</li>`).join('')}</ul>` : ""}
+  <a href="noticias.html" class="links">← Volver al listado</a>
+`;
   } else {
     contenedor.innerHTML = `
       <h2>No se encontró la noticia</h2>
