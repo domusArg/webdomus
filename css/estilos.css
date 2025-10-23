@@ -339,7 +339,7 @@ input.derivado {
   font-size: 0.95rem;
 }
 /* Select */
-#fruits {
+#Motivo_De_Consulta {
   padding: 0.7rem;
   border: 2px solid #FFB371;
   border-radius: 7px;
@@ -658,6 +658,10 @@ input.derivado {
   transition: background 0.3s;
   color: #474747;
   width: 100%;
+  text-decoration: none;
+}
+.botonContacto:hover{
+  background-color: #FFEE6F;
 }
 .btAcompa{
   width: 60%;
@@ -978,5 +982,143 @@ input.derivado {
 .contenedorImgDetalle{
   flex-wrap: wrap;
   min-height: 40vh;
+}
+}
+
+/*---------------------------------CAPACITACIONES-------------------------------------------------------------------------*/
+
+/*FORMULARIO CAPACITACIONES*/
+/* Contenedor del radio */
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 40px; /* espacio para el cuadro */
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Ocultar el radio original */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Cuadro cuadrado */
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border: 2px solid #FFB371;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* Tick que aparece al seleccionar */
+.radio-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Diseño del tick */
+.radio-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  height: 60%;
+  border: solid green;
+  border-width: 0 0.15em 0.15em 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Hover efecto opcional */
+.radio-container:hover .checkmark {
+  background-color: #f9f9f9;
+}
+
+/* Responsive: cuadros más grandes en móvil */
+@media screen and (max-width: 768px) {
+  .radio-container {
+    padding-left: 50px;
+    font-size: 20px;
+  }
+
+  .checkmark {
+    height: 40px;
+    width: 40px;
+    border-width: 3px;
+  }
+
+  .radio-container .checkmark::after {
+    width: 35%;
+    height: 65%;
+    border-width: 0 0.2em 0.2em 0;
+  }
+}
+
+
+.si-no{
+  margin-top: 2vh;
+}
+
+
+
+/* CURSO DOMUS */
+.cursoDomus {
+  background-color: #D2D9E3;
+  padding: 2rem 5%;
+  position: relative;
+  margin-top: 25vh;
+  padding-top: 12vh; padding-bottom: 12vh;
+}
+
+.cursoDomus .contenido {
+  display: flex;
+  justify-content: space-between; /* texto a la izquierda, imagen a la derecha */
+  align-items: center; /* centra verticalmente */
+  flex-wrap: wrap; /* para que se acomode en pantallas pequeñas */
+}
+
+.cursoDomus h3 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.cursoDomus p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.cursoDomus .imagen img {
+  max-width: 300px; /* ajusta según necesites */
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 20vw;
+  top: -15vh;
+}
+
+@media (max-width: 1000px) {
+  .cursoDomus {
+  margin-top: 5vh;
+  padding-top: 8vh; padding-bottom: 8vh;
+}
+.cursoDomus .contenido {
+  flex-direction: column;
+  gap: 2vh;
+}
+.cursoDomus .imagen img {
+  max-width: 250px; /* ajusta según necesites */
+  width: 100%;
+  height: auto;
+  position: static;
 }
 }
