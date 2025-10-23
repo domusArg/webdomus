@@ -150,6 +150,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
       AOS.init();
     </script>
@@ -186,26 +188,39 @@
   </script>
 
   <script>
-    document.getElementById("contacto-form-capacitaciones").addEventListener("submit", function(e) {
-      e.preventDefault();
+const scriptURL = "https://script.google.com/macros/s/AKfycbwDsZ7304CXGrEMI78ji4Z9tyYfyEoEBuN4m75sJZ15lPDzjRmSXCf9nzjB0Kad5g/exec"; // ← tu URL del Web App
+const form = document.getElementById("contacto-form-capacitaciones");
 
-      const form = e.target;
-      const datos = new FormData(form);
+form.addEventListener("submit", e => {
+  e.preventDefault();
 
-      fetch("https://script.google.com/macros/s/AKfycbzOrNcWjzwlhUyQpA3iurCd3HYaQghWi3jyIFnQfzkQHCzSQuokp-u395uSTfQUU07MZw/exec", {
-        method: "POST",
-        body: datos
-      })
-      .then(res => res.text()) // importante: convertir respuesta a texto
-      .then(data => {
-        document.getElementById("respuesta").textContent = "¡Mensaje enviado correctamente!";
-        form.reset();
-      })
-      .catch(err => {
-        document.getElementById("respuesta").textContent = "Hubo un error, inténtalo de nuevo.";
-        console.error(err);
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then(response => {
+      Swal.fire({
+        title: "¡Mensaje enviado! 🎉",
+        text: "Gracias por contactarte. Te responderemos pronto.",
+        icon: "success",
+        confirmButtonText: "Cerrar",
+        confirmButtonColor: "#FFB371", // podés adaptar el color a tu paleta
+        background: "#fefefe",
+        color: "#474747"
       });
+      form.reset();
+    })
+    .catch(error => {
+      Swal.fire({
+        title: "Ups... algo salió mal 😕",
+        text: "No se pudo enviar tu mensaje. Por favor, intentá nuevamente.",
+        icon: "error",
+        confirmButtonText: "Reintentar",
+        confirmButtonColor: "#E57373",
+        background: "#fff",
+        color: "#333"
+      });
+      console.error("Error:", error);
     });
-  </script>
+});
+</script>
+
   </body>
 </html>
