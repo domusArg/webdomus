@@ -234,9 +234,9 @@ footer{
   align-items: center;
 }
 .fotoYtextoJaz img{
-  max-width: 400px;
+  max-width: 350px;
   height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .listaJaz{
   ul{
