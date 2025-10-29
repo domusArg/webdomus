@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link deseleccionado" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link deseleccionado" href="./clubes.html">Acompañamiento</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="./clubes.html">Tratamientos</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./colaboraciones.html">Colaboraciones</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./capacitaciones.html">Capacitaciones</a></li>
         <li class="nav-item"><a class="nav-link activo" href="./noticias.html">Novedades</a></li>
@@ -196,6 +196,16 @@ Este proyecto permitió experimentar la sinergia creativa y la construcción de 
       imagen3: "../assets/img/novedades/sinofender3.webp",
       video: "",
       conclusion: ``, conclusion2: ``, imagen3:"",
+    },n5: {
+      titulo: "Libro “Paisajes emocionales”",
+      texto: " “Paisajes emocionales” es un libro diseñado para acompañar a los niños y niñas en la exploración y comprensión de sus emociones de una manera creativa. Es una semilla para que puedan recorrer un camino de autoconocimiento por medio de diferentes actividades basadas en técnicas de Mindfulness y arte. El libro propone jugar, recortar, dibujar, pintar o hacer collage con actividades interactivas en cada una de sus páginas. El recorrido parte de la guía de un adulto (madres, padres, cuidadores, educadores o terapeutas) y les propone herramientas para que puedan acercar y regalar una habilidad que los niños y niñas van a tener cerca toda la vida... y que les va a permitir sentirse un poco más seguros, apoyados y valorados.",
+      imagen: "",
+      imagen3: "",
+      video: "",
+      conclusion: "<strong>¿A quién está dirigido?</strong> <br> Chicos/as a partir de los 6 años, padres, profesionales y docentes.", 
+      conclusion2: "<strong>¿Dónde comprarlo?</strong> <br> Podés adquirir el libro a la editorial AKADIA o en su red de librerías en todo el país. También podés contactarnos para poder realizar la compra de forma directa.", imagen3:"",
+      video: "https://www.youtube.com/embed/vpAy87lw940?si=l9ZvPfFk58MEJG4o",
+      
     },
   };
 
@@ -224,6 +234,7 @@ Este proyecto permitió experimentar la sinergia creativa y la construcción de 
   <p>${noticia.conclusion2}</p>
   ${noticia.puntos ? `<h3>${noticia.tituloLista}</h3><ul>${noticia.puntos.map(p => `<li>${p}</li>`).join('')}</ul>` : ""}
   <a href="noticias.html" class="links">← Volver al listado</a>
+
 `;
   } else {
     contenedor.innerHTML = `

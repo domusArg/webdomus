@@ -838,14 +838,48 @@ input.derivado {
     }
   }
 
+  /*SWIPER PORTADA NOTICIAS*/
+.swiperPortadaNoticias, .swiperColab{
+  height: auto;       
+  width: auto;
+  padding-bottom: 5vh;
+}
+.swiperPortadaNoticias .swiper-slide {
+  height: auto !important;         
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+}
+.swiperPortadaNoticias .swiper-pagination-bullet {
+  width: 40px;               /* Rectangular */
+  height: 6px;
+  border-radius: 3px;        /* Bordes redondeados suaves, sacáselo si querés recto */
+  background: #FFB371;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.swiperPortadaNoticias .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #FFB371;
+}
+.swiperPortadaNoticias {
+  --swiper-navigation-color: #FFB371;
+}
+
   /*PORTADA NOTICIAS*/
-  .portadaNoticias{
+  .fondoPortadaNoticias{
     background-color: #D7E7FF;
+  }
+  .portadaNoticias{
     display: flex; justify-content: space-between; align-items: center;
     gap: 10vh;
     padding: 5vh 10vh 5vh 10vh;
     .botonContacto{
       width: 60%;
+    }
+    img{
+      border-radius: 10px;
+      max-width: 25vw;
     }
   }
   .tituloNoticias{
@@ -853,17 +887,45 @@ input.derivado {
     gap: 3vh;
   }
 @media (max-width: 700px) {
- .portadaNoticias{
-    flex-wrap: wrap-reverse;
-    padding: 7vh 2vh 7vh 2vh;
-    .botonContacto{
+/* Centrar imagen y texto */
+  .portadaNoticias {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh; /* Más espacio entre elementos */
+  }
+
+  /* Aumentar separación entre flechas y texto */
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: translateY(0);
+  }
+
+  .swiper-button-prev {
+    left: 5%;
+  }
+
+  .swiper-button-next {
+    right: 5%;
+  }
+
+  .swiperPortadaNoticias {
+    padding-bottom: 5vh;
+  }
+
+  .tituloNoticias{
+    display: flex; flex-direction: column; align-items: center;
+    gap: 3vh;
+    a{
+      .botonContacto{
+        width: 100%;
+      }
       width: 100%;
     }
   }
-  .tituloNoticias{
-    display: flex; flex-direction: column;
-    gap: 3vh;
-  }
+}
+
+.swiperPortadaNoticias {
+  transition: height 0.4s ease;
 }
   /*CONTAINER NOTICIAS*/
 .containerNoticias a {
@@ -1126,4 +1188,22 @@ input.derivado {
   height: auto;
   position: static;
 }
+}
+
+/*GALERÍA DOMUS*/
+.galeria{
+  h2{
+    margin-top: 8%;
+    text-align: center;
+  }
+}
+.fotoGaleria{
+  display: flex; flex-direction: column; width: 25vw; gap: 3vh; align-items: center; 
+}
+.galeriaDomus{
+  display: flex; align-items: baseline; justify-content: space-around;
+  flex-wrap: wrap;
+  img{
+    max-width: 20vw;
+  }
 }

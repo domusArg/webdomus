@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link deseleccionado" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link deseleccionado" href="./clubes.html">Acompañamiento</a></li>
+        <li class="nav-item"><a class="nav-link deseleccionado" href="./clubes.html">Tratamientos</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./colaboraciones.html">Colaboraciones</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./capacitaciones.html">Capacitaciones</a></li>
         <li class="nav-item"><a class="nav-link activo" href="./noticias.html">Novedades</a></li>
@@ -65,25 +65,54 @@
     </h1>
   </div>
 
-  <section class="portadaNoticias separadorTop">
-    <img class="img-fluid" src="../assets/img/novedades/domusInformador.png" alt="">
-    <div class="tituloNoticias">
-      <div>
-        <h2>Domus - El informador</h2>
-        <p class="fw-light fs-6">03/03/2025</p>
+  <section class="fondoPortadaNoticias  separadorTop">
+    <div class="separadorLados">
+    <!-- Swiper -->
+  <div class="swiper swiperPortadaNoticias">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="portadaNoticias">
+      <img class="img-fluid " src="../assets/img/novedades/paisajesemocionales.png" alt="">
+      <div class="tituloNoticias">
+          <div>
+            <h2>Libro “Paisajes emocionales”</h2>
+          </div>
+          <p>"Paisajes emocionales" es un libro diseñado para acompañar a los niños y niñas en la exploración y comprensión de sus emociones de una manera creativa. Es una semilla para que puedan recorrer un camino de autoconocimiento por medio de diferentes actividades basadas en técnicas de Mindfulness y arte.</p>
+          <a href="detalle.html?id=n5">
+            <button class="botonContacto">
+                    Ver más</button>
+          </a>
+        </div>
       </div>
-      <p>Con mucha alegría les compartimos la versión digital del periódico de Domus. Para que conozcas un poco más sobre el espacio, el equipo y por sobre todo.. de los chicos y sus creaciones!</p>
-      <a href="">
-        <button class="botonContacto">
-                Descargar</button>
-      </a>
+      </div>
+      <div class="swiper-slide">
+        <div class="portadaNoticias">
+          <img class="img-fluid" src="../assets/img/novedades/domusInformador.png" alt="Domus informardor periódico">
+        <div class="tituloNoticias">
+          <div>
+            <h2>Domus - El informador</h2>
+            <p class="fw-light fs-6">03/03/2025</p>
+          </div>
+          <p>Con mucha alegría les compartimos la versión digital del periódico de Domus. Para que conozcas un poco más sobre el espacio, el equipo y por sobre todo.. de los chicos y sus creaciones!</p>
+          <a href="">
+            <button class="botonContacto">
+                    Descargar</button>
+          </a>
+        </div>
     </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
   </section>
 
-  <div class="separadorLados organizacionNoticias">
+  <div class="separadorLados organizacionNoticias separadorTop">
     <div class="containerNoticias separadorTop">
       <a href="detalle.html?id=n1">
-      <div class="contenedorImgNoticias">
+      <div class="contenedorImgNoticias" data-aos="zoom-in">
         <img class="img-fluid" src="../assets/img/novedades/panelCreatividad.png" alt="">
       </div>
       <div>
@@ -97,7 +126,7 @@
     <div class="divisor separadorTop"></div>
     <div class="containerNoticias separadorTop">
       <a href="detalle.html?id=n2">
-      <div class="contenedorImgNoticias">
+      <div class="contenedorImgNoticias" data-aos="zoom-in">
         <img class="img-fluid" src="../assets/img/novedades/capacitacionTBL.png" alt="">
       </div>
         <div>
@@ -109,7 +138,7 @@
     </div>
     <div class="containerNoticias separadorTop">
       <a href="detalle.html?id=n3">
-      <div class="contenedorImgNoticias">
+      <div class="contenedorImgNoticias" data-aos="zoom-in">
         <img class="img-fluid" src="../assets/img/novedades/sanMartin.webp" alt="">
       </div>
         <div>
@@ -121,7 +150,7 @@
       </a>
     </div>
     <div class="divisor separadorTop"></div>
-    <div class="containerNoticias separadorTop">
+    <div class="containerNoticias separadorTop" data-aos="zoom-in">
       <a href="detalle.html?id=n4">
       <div class="contenedorImgNoticias">
         <img class="img-fluid" src="../assets/img/novedades/sinofender.webp" alt="">
@@ -136,6 +165,25 @@
     </div>
   </div>
   
+  <section class="separadorTop separadorLados" data-aos="fade-up">
+    <div class="separadorTop galeria">
+      <h2>Galería Domus</h2>
+      <div class="galeriaDomus separadorTop">
+        <div class="fotoGaleria">
+          <img class="img-fluid" src="../assets/img/novedades/drDaniel.png" alt="">
+          <p>Compartiendo nuevamente la experiencia de Domus en el curso 2023 de Lego Based Therapy junto al Dr. Daniel</p>
+        </div>
+        <div class="fotoGaleria">
+          <img class="img-fluid" src="../assets/img/novedades/UBA.png" alt="">
+          <p>Capacitación en Facultad de Piscología (UBA)</p>
+        </div>
+        <div class="fotoGaleria">
+          <img class="img-fluid" src="../assets/img/novedades/paisajesHospital.png" alt="">
+          <p>Paisajes emocionales en la escuela María Luisa López en Tolombón, Salta</p>
+        </div>
+      </div>
+    </div>
+  </section>
     </main>
 
 
@@ -155,33 +203,34 @@
 
      <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".swiperColab", {
-       slidesPerView: 1,
-      spaceBetween: 30,
-      rewind: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 1,
-          spaceBetween: 50,
-        },
-      },
-    });
+    var swiper = new Swiper(".swiperPortadaNoticias", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  rewind: true,
+  autoHeight: true, // 🔥 esta línea hace que la altura se adapte
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+  },
+});
   </script>
   </body>
 </html>

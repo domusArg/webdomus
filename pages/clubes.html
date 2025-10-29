@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link deseleccionado" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link activo" href="./clubes.html">Acompañamiento</a></li>
+        <li class="nav-item"><a class="nav-link activo" href="./clubes.html">Tratamientos</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./colaboraciones.html">Colaboraciones</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./capacitaciones.html">Capacitaciones</a></li>
         <li class="nav-item"><a class="nav-link deseleccionado" href="./noticias.html">Novedades</a></li>
@@ -95,7 +95,7 @@
           <p>Los espacios individuales están pensados tanto para niños, adolescentes, y jóvenes que encuentran un lugar para expresar emociones y desarrollar recursos propios, como para padres, que reciben orientación y herramientas para acompañar de la mejor manera los desafíos de la crianza. Cada encuentro respeta la historia, el ritmo y las necesidades particulares, con el objetivo de favorecer el bienestar y fortalecer los vínculos familiares.</p>
         </div>
   <!-- Swiper -->
-  <div class="swiper swiperAcompa">
+  <div class="swiper swiperAcompa separadorTop">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="contenedorAcompa">
@@ -182,7 +182,7 @@
     <p>Los clubes son comunidades vivas donde lo grupal cobra fuerza: no se trata solo de aprender, sino de compartir, crear y crecer juntos. Son lugares seguros para encontrarnos, donde el juego, la creatividad y la autenticidad hacen posible que cada persona se sienta parte de algo más grande, siendo vista, escuchada y valorada.</p>
   </div>
   <!-- Swiper --> 
-   <div class="swiper swiperAcompa"> 
+   <div class="swiper swiperAcompa separadorTop"> 
     <div class="swiper-wrapper"> <div class="swiper-slide"> 
       <div class="contenedorAcompa contenedorGrupales"> 
         <div class="textoSwiperAcompa"> 
@@ -424,7 +424,7 @@
 
  <hr class="separadorTop">
 
-<a href="../index.html#formulario"><div class="separadorLados separadorTop btAcompa" style="width: 100%; text-decoration: none;">
+<a href="../index.html#formulario" style=" text-decoration: none;"><div class="separadorLados separadorTop btAcompa" style="width: 100%; text-decoration: none;">
   <button class="botonContacto" style="width: 80%; text-decoration: none;">
         Contacto</button>
 </div></a>
@@ -452,6 +452,7 @@
        slidesPerView: 1.3,
       spaceBetween: 30,
       rewind: true,
+      autoHeight: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
