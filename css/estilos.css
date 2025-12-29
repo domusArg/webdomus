@@ -1259,3 +1259,56 @@ input.derivado {
     }
 }
 }
+
+/*---------------------------------------CURSO TBL------------------------------------------------*/
+.azul{
+  color: #0475C1;
+}
+
+.inicioCurso{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .textoColab{
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+.inicioCurso{
+  flex-wrap: wrap;
+  align-items: center; justify-content: center;
+  margin-top: 8vh;
+  gap: 8vh;
+}
+.datosCurso{
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+}
+.pattern-band{
+  width: 100%;
+  height: 72px !important;
+
+  background-image: url("../assets/img/cursoTBL/fichaLego.png");
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: 180px auto;
+
+  margin-top: 8vh;
+  display: block;
+}
+
+
+.cursoIndex{
+  background-color: #D7E7FF;
+  margin: 0;
+}
+.cursoIndexContenedor{
+  padding-top: 7vh; padding-bottom: 7vh;
+  justify-content: space-around;
+  align-items: center;
+  div{
+    width: 100%;
+  }
+}
