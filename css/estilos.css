@@ -1312,3 +1312,10 @@ input.derivado {
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+.cursoIndexContenedor{
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+}
