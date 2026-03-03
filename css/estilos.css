@@ -1321,7 +1321,7 @@ input.derivado {
 }
 
 #leadForm{
-  width: 100vw;
+  width: 100%;
 }
 #leadEmail{
   padding: 0.7rem;
@@ -1346,6 +1346,6 @@ input.derivado {
   gap: 4vh;
 }
 #leadEmail{
-width: 70%;
+width: 100%;
 }
 }
