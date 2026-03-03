@@ -187,6 +187,41 @@
           </div>
         </section>
 
+        <section class="cursoIndex separadorTop" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back" style="margin-top: 10vh;">
+        <div class="separadorLados cursoIndexContenedor">
+          <div class="textoCurso d-flex flex-column gap-3">
+          <h3 class="fw-bold fs-5">Inscripción</h3>
+          <h1 class="fw-bold azul">Supervisión profesional - Terapia Basada en LEGO</h1>
+        </div>
+        <div>
+          <div>
+            <p>Supervisión específica para profesionales que implementan Terapia Basada en Lego.</p>
+        </div>
+        <div>
+<form
+  id="leadForm"
+  action="https://script.google.com/macros/s/AKfycbwyp7fbjlzqdQRkQy6RRcFhw5a6E0zfM9KF8_HoMqZ064fcw4gfiQ-eSLqMTHTtiJst/exec"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="return leadSubmit();"
+>
+  <input
+    type="email"
+    id="leadEmail"
+    name="email"
+    placeholder="tuemail@correo.com"
+    required
+  />
+
+  <button id="leadBtn" type="submit">
+    Enviar
+  </button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+      </section>
+
         <section class="capacitacionesHome separadorTop" data-aos="fade-zoom-in"
      data-aos-easing="ease-in-back">
           <div class="textoCapacitaciones">
@@ -209,35 +244,6 @@
             </div>
           </div>
         </section>
-
-
-        <section class="cursoIndex separadorTop" data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back" style="margin-top: 10vh;">
-        <div class="separadorLados d-flex cursoIndexContenedor">
-          <div class="textoCurso d-flex flex-column gap-3">
-          <h3 class="fw-bold fs-5">Curso en</h3>
-          <h1 class="fw-bold azul">Terapia basada en Lego</h1>
-          <h2 class="fw-bold azul fs-3">Juego, Identidad Social y Dinámicas Colaborativas para personas autistas</h2>
-          <a href="https://forms.gle/ddHZNsdtExQhwvZJ6" target="_blank"><button class="botonContacto">
-                Inscríbete aquí</button></a>
-        </div>
-        <div>
-          <div>
-            <h3 class="fw-bold">¿De qué se trata?</h3>
-            <p>Formación teórico–práctica en Terapia Basada en Lego un enfoque con respaldo científico que utiliza el juego de construcción colaborativo para favorecer la interacción social, la identidad, la comunicación y la regulación emocional en personas autistas, a través del trabajo entre pares y el interés compartido.</p>
-        </div>
-        <div>
-            <h3 class="fw-bold">Importancia y beneficios:</h3>
-            <ul>
-                <li>Intervención centrada en el juego colaborativo y la participación social.</li>
-                <li>Favorece la comunicación , resolución de problemas y la flexibilidad.</li>
-                <li>Contribuye a la regulación emocional y a la interacción entre pares.</li>
-                <li>Enfoque aplicable en contextos clínicos y educativos.</li>
-            </ul>
-        </div>
-        </div>
-        </div>
-      </section>
 
         <section class="capacitacionesHome separadorTop">
           <div class="textoCapacitaciones">
@@ -453,6 +459,38 @@ document.getElementById("formulario").addEventListener("submit", function(e) {
   });
 </script>
 
+<script>
+function leadSubmit() {
+  const email = document.getElementById("leadEmail").value.trim();
+  const btn = document.getElementById("leadBtn");
+
+  if (!email) {
+    Swal.fire({
+      icon: "warning",
+      title: "Escribe tu email",
+      confirmButtonColor: "#FFB371"
+    });
+    return false;
+  }
+
+  btn.disabled = true;
+
+  // Dejamos que el form se envíe al iframe
+  setTimeout(() => {
+    Swal.fire({
+      icon: "success",
+      title: "¡Enviado! 🎉",
+      text: "Revisa tu correo (también Spam o Promociones).",
+      confirmButtonColor: "#FFB371"
+    });
+
+    btn.disabled = false;
+    document.getElementById("leadForm").reset();
+  }, 800);
+
+  return true; // permite que el form se envíe
+}
+</script>
 
   </body>
 </html>

@@ -1319,3 +1319,33 @@ input.derivado {
   gap: 5vh;
 }
 }
+
+#leadForm{
+  width: 100vw;
+}
+#leadEmail{
+  padding: 0.7rem;
+  border: 2px solid #FFB371;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  width: 50%;
+}
+#leadBtn{
+  width: 30%;
+  background-color: #FFB371;
+  border: 2px solid #FFB371;
+  padding: 0.7rem;
+  border-radius: 7px;
+}
+
+@media (max-width: 800px) {
+  #leadForm{
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+#leadEmail{
+width: 70%;
+}
+}
