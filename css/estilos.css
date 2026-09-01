@@ -2012,6 +2012,26 @@ width: 100%;
   }
 }
 
+.residencia-index-textoyvideo{
+  display: flex; gap: 5vh;
+  align-items: center;
+  video{
+    max-width: 40%;
+  }
+}
+
+.logoresidencia-Index{
+  img{max-width: 30%;}
+}
+
+.residenciaIndex{
+  padding-top: 60px; padding-bottom: 60px; padding-left: 30px; padding-right: 30px;
+  box-sizing: border-box;
+  /* El marco azul */
+  outline: 10px solid #0475C1; /* Cambia el grosor y el código de color según tu azul */
+  outline-offset: -10px;
+}
+
 @media (max-width: 800px) {
  .residenciaHeader{
   img{
@@ -2043,6 +2063,17 @@ width: 100%;
     text-align: left;
     justify-content: flex-start;
     p{text-align: start;}
+  }
+}
+
+.logoresidencia-Index{
+  img{max-width: 70%; min-width: 70%;}
+}
+.residencia-index-textoyvideo{
+  display: flex; gap: 5vh; flex-direction: column;
+  align-items: center; justify-content: center;
+  video{
+    max-width: 100%;
   }
 }
 }
@@ -2097,3 +2128,4 @@ width: 100%;
   .contFormResidencia{
     padding-top: 5vh; padding-bottom: 5vh;
   }
+
