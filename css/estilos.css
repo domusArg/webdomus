@@ -62,8 +62,9 @@ header{
 }
 }
 .activo {
-  background-color: #FFB371; 
   border-radius: 5px;
+  text-decoration: underline #FFB371 solid 4px;
+  text-underline-offset: 5px;
 }
 .nav-link{
    color: #474747;
@@ -667,6 +668,7 @@ input.derivado {
 }
 .botonContacto:hover{
   background-color: #FFEE6F;
+  transform: translateY(-1px);
 }
 .btAcompa{
   width: 60%;
@@ -1261,45 +1263,666 @@ input.derivado {
 }
 
 /*---------------------------------------CURSO TBL------------------------------------------------*/
-.azul{
-  color: #0475C1;
+.fondoAzul{
+  background-color: #D7E7FF;
 }
 
 .inicioCurso{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .textoColab{
-    width: 50%;
+  padding-top: 15vh; padding-bottom: 15vh;
+  .contenedor{
+    flex-direction: row; justify-content: space-around;
+  }
+  .texto{
+    width: 60%;
+    justify-content: center; gap: 5%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
 .inicioCurso{
-  flex-wrap: wrap;
-  align-items: center; justify-content: center;
-  margin-top: 8vh;
-  gap: 8vh;
+  padding-top: 10vh; padding-bottom: 10vh;
+  .contenedor{
+    flex-direction: column;
+    gap: 7vh;
+  }
+  .texto{
+    width: 100%;
+    gap: 2vh;
+  }
+  h1{text-align: center;}
+  p{text-align: center;}
 }
-.datosCurso{
-  flex-wrap: wrap;
-  gap: 5vh;
+}
+
+/*MARQUEE*/
+  .marquee-curso{
+    background-color: #2A374B;
+    padding-top: 1%; padding-bottom: 1%;
+  }
+ .marquee-content-curso {
+    display: flex; 
+    gap: .5%;  
+    align-items: baseline;
+    h2{
+      white-space: noWrap;
+      color: #FDFBEA;
+    }        
+    width: max-content;      
+    animation: marquee 40s linear infinite;
+  }
+
+  /*SECCION DESAFÍO*/
+  .desafio{
+    padding-top: 5vh;
+    .fichas{
+      flex-direction: row; justify-content: space-between;
+    }
+  }
+  @media (max-width: 700px) {
+.desafio{
+  div{
+    h3{text-align: center;}
+  }
+  .fichas{
+    flex-direction: column; gap: 7vh;
+    align-items: center;
+    img{
+      max-width: 80%;
+    }
+  }
 }
 }
-.pattern-band{
+
+/*SECCIÓN DE GRILLA DE CUBOS DE COLORES*/
+
+.grillaCubos{
+  flex-direction: row; justify-content: space-between; gap: 5vw; margin-top: 7rem;
+  .titulo{
+    flex-direction: column;
+    width: 30%; gap: 1vh;
+  }
+}
+/* ── Grilla de cubos ── */
+    .lego-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .lego-cell {
+      padding: 1.2rem 1.4rem;
+      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.4;
+      min-height: 70px;
+    }
+
+    /* Header: ocupa las 2 columnas */
+    .lego-cell--header {
+      grid-column: 1 / -1;
+      background-color: #c8dff5; /* azul suave */
+      min-height: 56px;
+      font-size: clamp(0.78rem, 1.5vw, 0.88rem);
+    }
+
+    .lego-cell--yellow-left  { background-color: #FCF5C2; } /* amarillo */
+    .lego-cell--orange-right { background-color: #FFD5B0; } /* naranja */
+    .lego-cell--pink-left    { background-color: #FFE2D7; } /* rosa */
+    .lego-cell--yellow-right { background-color: #F7FCC2; } /* amarillo */
+
+    @media (max-width: 700px) {
+      /* En mobile la grilla mantiene las 2 columnas,
+         pero se reduce para caber en pantalla pequeña */
+      .lego-grid {
+        width: 100%;
+      }
+
+      .lego-cell {
+        padding: 1rem;
+        font-size: 0.82rem;
+        min-height: 80px;
+        text-align: left;
+        justify-content: flex-start;
+      }
+
+      .lego-cell--header {
+        text-align: center;
+        justify-content: center;
+        min-height: 60px;
+      }
+
+      .grillaCubos{
+        flex-direction: column; justify-content: space-between; gap: 5vw; padding-top: 10vh;
+        .titulo{
+          flex-direction: column;
+          width: 100%; gap: 1vh;
+        }
+      }
+    }
+
+
+    /*MINI SECCIÓN INFORMATIVA*/   
+    /* ── Sección principal ── */
+    .hero {
+      background-color: #D7E7FF;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+      padding: 3rem 2rem;
+      margin-top: 7rem;
+    }
+ 
+    /* ── Contenido central ── */
+    .hero__content {
+      text-align: center;
+      max-width: 560px;
+      position: relative;
+      z-index: 2;
+    }
+ 
+    .hero__text {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      font-weight: 600;
+      line-height: 1.55;
+      margin-bottom: 1.8rem;
+    }
+ 
+    .hero__highlight {
+      background-color: #f9e94e;
+      padding: 0 4px;
+      border-radius: 3px;
+    }
+ 
+    /* ── Imágenes decorativas ── */
+    .hero__img {
+      position: absolute;
+      z-index: 1;
+    }
+ 
+    /* Lamparita — arriba derecha */
+    .hero__img--bulb {
+      top: -10px;
+      right: 40px;
+      width: clamp(80px, 10vw, 130px);
+    }
+ 
+    /* Personaje LEGO — abajo izquierda */
+    .hero__img--lego {
+      bottom: -10px;
+      left: 30px;
+      width: clamp(90px, 11vw, 140px);
+    }
+ 
+
+    @media (max-width: 700px) {
+      .hero {
+        align-items: flex-start;
+        padding: 7rem 1.4rem 10rem;
+        min-height: fit-content;
+      }
+ 
+      .hero__content {
+        text-align: left;
+        max-width: 100%;
+      }
+ 
+      .hero__text {
+        font-size: 1.35rem;
+        margin-bottom: 1.4rem;
+      }
+ 
+      /* Lamparita — arriba derecha */
+      .hero__img--bulb {
+        top: 0px;
+        right: 10px;
+        width: 80px;
+      }
+ 
+      /* Lego — abajo izquierda, sale un poco del borde */
+      .hero__img--lego {
+        bottom: 0px;
+        left: 10px;
+        width: 100px;
+      }
+    }
+
+/*SECCIÓN LO QUE TE LLEVARÁS (CARRUSEL)*/
+
+    .contenedorCarrusel{
+      display: flex; flex-direction: column;
+      gap: 2rem; margin-top: 7rem;
+    }
+
+    .carousel__track-wrapper {
+      overflow: hidden;
+      cursor: grab;
+      user-select: none;
+    }
+ 
+    .carousel__track-wrapper.is-dragging {
+      cursor: grabbing;
+    }
+ 
+    /* ── Track ── */
+    .carousel__track {
+      display: flex;
+      gap: 5rem;
+      padding: 1.5rem 0.5rem;
+      /* La transición se activa solo al soltar (snap), no durante el drag */
+      will-change: transform;
+    }
+ 
+    .carousel__track.is-snapping {
+      transition: transform 0.35s ease;
+    }
+
+    /* ── Dots ── */
+    .carousel__dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1.5rem;
+    }
+ 
+    .carousel__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      padding: 0;
+    }
+ 
+    .carousel__dot.active {
+      background-color: #f0a060;
+      transform: scale(1.3);
+    }
+ 
+    @media (max-width: 900px) {
+      .carousel__card {
+        flex: 0 0 calc(50% - 0.75rem);
+      }
+    }
+ 
+    @media (max-width: 560px) {
+      .carousel-section {
+        padding: 0 1.2rem;
+      }
+      .carousel__card {
+        flex: 0 0 85%;
+      }
+      .carousel__track {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 0.5rem;
+      /* La transición se activa solo al soltar (snap), no durante el drag */
+      will-change: transform;
+    }
+    }
+
+/*SECCION MODULOS*/
+.modulos{
+  margin-top: 7rem;
+  padding-top: 5rem; padding-bottom: 5rem;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 5rem;
+}
+/*acordeon*/
+
+.AcordeonCurso{
+  margin: 0 auto;
+  width: 60%;
+
+
+  .accordion-button {
+  background-color: #FFDDBF;
+  color: #474747;
+  border-radius: 5px !important;
+  transition: all 0.3s ease;
+  h4{margin: 0 auto;}
+}
+
+/* Hover del título */
+.accordion-button:hover {
+  border: 3px solid #f0a060;
+  background-color: #FFDDBF;
+}
+
+/* Estado abierto */
+.accordion-button:not(.collapsed) {
+  background-color: #FFDDBF;
+  box-shadow: inset 0 -1px 0 rgba(224, 210, 210, 0.125);
+}
+
+/* Cuerpo del acordeón */
+.accordion-bodyCurso {
+  background-color: #fafafa;
+  border-radius: 0 0 15px 15px;
+  margin-top: 0;
+}
+
+/* Borde general del acordeón */
+.accordion-item {
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+}
+
+@media (max-width: 700px) {
+.AcordeonCurso{
+width: 100%;
+}
+}
+
+
+/*SECCIÓN DE MATERIALES*/
+.materiales{
+  display: flex; flex-direction: column; gap: 2rem; margin-top: 7rem;
+  align-items: center;
+  ul{
+    width: 80%; margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+.materiales{
+ul{
+  width: 100% !important; margin: 0;
+}
+}
+}
+
+
+/*SECCIÓN INFORMACIÓN DE LA DOCENTE*/
+.infoDocente{
+  margin-top: 7rem;
+}
+#casillaBlanca{
+  border-radius: 8px;
+  width: 50%;
+}
+#li{
+    list-style-type: disc;
+    margin-top: 4vh; padding-left: 0;
+    display: block;
+    justify-content: flex-start;
+    padding-left: 2vw;
+    li{
+      border: none;
+      width: fit-content;
+      padding: 0;
+    }
+}
+#infoDocente{
+  display: flex; justify-content: baseline;
+}
+@media (max-width: 700px) {
+#casillaBlanca{
+width: 100%;
+display: block;
+}
+#infoDocente{
+  display: flex; justify-content: center;
+}
+}
+
+/*SECCIÓN A QUIEN ESTÁ DIRIGIDO*/
+.dirigido{
+  margin-top: 7rem;
+  display: flex; flex-direction: column; gap: 2rem; align-items: center; justify-content: center;
+}
+
+ /* ── Contenedor del marquee: ancho limitado y centrado ── */
+    .marquee-wrapper {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      overflow: hidden;         /* recorta el scroll */
+      background: none;      /* amarillo igual al diseño */
+      border-radius: 12px;
+      padding: 22px 0;
+    }
+ 
+    /* ── Efecto blur en los bordes izquierdo y derecho ── */
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+ 
+    .marquee-wrapper::before {
+      left: 0;
+      background: linear-gradient(to right, #FDFBEA 0%, transparent 100%);
+    }
+ 
+    .marquee-wrapper::after {
+      right: 0;
+      background: linear-gradient(to left, #FDFBEA 0%, transparent 100%);
+    }
+ 
+    /* ── Track que se mueve ── */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 30s linear infinite;
+    }
+ 
+    /* Pausa al hacer hover */
+    .marquee-wrapper:hover .marquee-track {
+      animation-play-state: paused;
+    }
+ 
+    /* ── Items ── */
+    .marquee-item {
+      white-space: nowrap;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #1a1a1a;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+ 
+    /* Separador | */
+    .marquee-item::after {
+      content: '|';
+      color: #474747;
+      font-weight: 400;
+    }
+ 
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); } /* -50% porque duplicamos el contenido */
+    }
+
+    .resaltado{
+      background-color: #FFEE6F;
+      width: 50%; padding: 1rem;
+      p{
+        margin: 0 auto;
+      }
+    }
+@media (max-width: 700px) {
+ .resaltado{
   width: 100%;
-  height: 72px !important;
-
-  background-image: url("../assets/img/cursoTBL/fichaLego.png");
-  background-repeat: repeat-x;
-  background-position: left center;
-  background-size: 180px auto;
-
-  margin-top: 8vh;
-  display: block;
+  p{
+    text-align: left;
+  }
+  }
 }
 
+/*SECCIÓN DE PREGUNTAS FRECUENTES*/
+.faq{
+  margin-top: 7rem;
+  display: flex; flex-direction: column; gap: 2rem; align-items: center;
+  h4{
+    font-weight: 400; font-size: 1rem;
+  }
+}
 
+/*SECCION DE INSCRIPCION*/
+.inscripcion{
+  margin-top: 7rem;
+  background-color: #D7E7FF; padding-top: 5rem; padding-bottom: 5rem;
+  display: flex; flex-direction: column; gap: 3rem;
+  .titulo{
+    display: flex; align-items: center; justify-content: center; gap: 5rem;
+    text-align: center;
+  }
+}
+#chocando2{
+  display: block;
+  transform: scaleX(-1);
+}
+
+/* ── Grid de cards ── */
+    .precios-wrapper {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+ 
+    /* ── Card base ── */
+    .precio-card {
+      background: #FFFFF8;
+      border-radius: 15px;
+      padding: 36px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border: 2px solid transparent;
+      /* Efecto de levantarse */
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      cursor: default;
+    }
+ 
+    .precio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.13);
+    }
+ 
+    /* Card destacada */
+    .precio-card.destacada { 
+      border: 3px solid #F5A461 ;
+    }
+ 
+    /* ── Encabezado ── */
+    .card-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+ 
+    .card-header p {
+      font-size: 0.88rem;
+      color: #474747;
+      text-align: center;
+    }
+ 
+    /* ── Lista de features ── */
+    .card-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1; /* empuja el precio y botón al fondo */
+    }
+ 
+    .card-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: #474747;
+      line-height: 1.4;
+    }
+ 
+    .card-features li::before {
+      content: '✓';
+      color: #3ab86e;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+ 
+    /* ── Precio ── */
+    .card-price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #474747;
+      text-align: center;
+    }
+ 
+    /* ── Botón ── */
+    .card-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #F5A461;
+      color: #474747;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+ 
+    .card-btn:hover {
+      background: #e8904a;
+      transform: scale(1.02);
+    }
+ 
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      .precios-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 90%;
+      }
+      .inscripcion{
+        margin-top: 7rem;
+        background-color: #D7E7FF; padding-top: 3.5rem; padding-bottom: 3.5rem;
+        .titulo{
+          display: flex; align-items: center; justify-content: center; gap: 5rem;
+          flex-direction: column;
+          p{text-align: left;}
+        }
+      }
+      #chocando2{
+        display: none;
+        transform: scaleX(-1);
+      }
+    }
+
+/*--------------------PEQUEÑA SECCION DE SUPERVISIÓN-------------------------------*/
 .cursoIndex{
   background-color: #D7E7FF;
   margin: 0;
@@ -1349,3 +1972,128 @@ input.derivado {
 width: 100%;
 }
 }
+
+/*-----------------------------------RESIDENCIA-----------------------------------------*/
+.residenciaHeader{
+  img{
+    max-width: 30%;
+  }
+  p{
+    max-width: 60%;
+    margin-top: 5vh;
+  }
+  a{
+    margin-top: 5vh;
+  }
+}
+
+.porquedomuscont{
+  gap: 5vh;
+  flex-direction: row;
+}
+.porquedomus{
+  img{
+    width: 10%;
+    min-width: 25%;
+  }
+}
+
+.video-player {
+  width: 80%;          /* Ocupa exactamente el 50% del ancho disponible */
+  height: auto;        /* Mantiene la proporción original para que no se deforme */
+  display: block;      
+  margin: 0 auto;      /* Esto lo centra automáticamente en la pantalla */
+  max-width: 100%;     /* Seguridad para que nunca desborde */
+}
+
+.seccionVideo{
+  .texto{
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+ .residenciaHeader{
+  img{
+    min-width: 60%;
+    max-width: 70%;
+  }
+  p{
+    max-width: 100%;
+  }
+  a{
+    width: 100%;
+  }
+}
+.porquedomus{
+  img{
+    width: 40%;
+  }
+}
+.porquedomuscont{
+  gap: 5vh;
+  flex-direction: column;
+}
+.video-player {
+  width: 100%;          /* Ocupa exactamente el 50% del ancho disponible */     /* Seguridad para que nunca desborde */
+}
+.seccionVideo{
+  .texto{
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+    p{text-align: start;}
+  }
+}
+}
+
+/*FORMULARIO RESIDENCIA---------------------*/
+.form-domus {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-family: inherit;
+  }
+  .form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-grupo label {
+    font-weight: 600;
+    color: #474747;
+    font-size: 0.95rem;
+  }
+  .form-grupo input, 
+  .form-grupo textarea {
+    padding: 0.8rem;
+    border: 1.5px solid #e0d8ce;
+    border-radius: 8px;
+    background-color: #faf6f0;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-grupo input:focus, 
+  .form-grupo textarea:focus {
+    border-color: #FFB371;
+  }
+  .form-btn {
+    background-color: #FFB371;
+    color: #333;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .form-btn:hover {
+    background-color: #f09e57;
+  }
+  .contFormResidencia{
+    padding-top: 5vh; padding-bottom: 5vh;
+  }
